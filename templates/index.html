@@ -17,29 +17,22 @@
   </header>
   <main class="main">
     <div class="container">
+      <div id="izquierda">
       <div class="title">
-            <h2>Algoritmoss </h2>
+            <h2>Algoritmos </h2>
       </div>
       <label for="operador"></label>
       <select name="opcion" id="operador">
-        <option value="" hidden>seleccionar</option>
-        <option value="exponencial">Exponencial</option>
-          <!--<option value="raizC">RaizC</option>
-          <option value="exponencial">Exponencial</option>
-          <option value="logaritmo">Logaritmo</option>
-          <option value="equalizacion">Equalizacion</option>
-          <option value="contrast">Contrast</option>
-          <option value="thresholding">Thresholding</option>
-          <option value="adicion_gris">6-Adicion Gris</option>
-          <option value="adicion">6-Adicion Color</option>
-          <option value="sustraccion_letra">6-Sustraccion Letra</option>
-          <option value="sustraccion_movimiento">6-Sustraccion Movimiento</option>
-          <option value="multiplicacionC">7-MultiplicacionC</option>
-          <option value="division_letra">7-Division Letra</option>
-          <option value="division">7-Division Movimiento</option>
-          <option value="blending">7-Blending</option>
-          <option value="operador_and">8-Operador AND</option>
-          <option value="operador_or">8-Operador OR</option>-->
+      <option value="" hidden>seleccionar</option>
+      <option value="global">Ali global (Needleman–Wunsch)</option>
+       <option value="global2"> ALi global FASTA (Needleman–Wunsch)</option>
+      <option value="local">Alineamiento local (Smith-waterman</option>
+      <option value="blast">BLAST</option>
+      <option value="muscle"> MUSCLE o CLUSTAL</option>
+      <option value="jukes">Jukes-cantor</option>
+      <option value="kimura">Kimura </option>
+      <option value="upgma">UPGMA </option>
+      <option value="neighbor">Neighbor Joining </option>
 
       </select>
      <form enctype="multipart/form-data">
@@ -47,39 +40,71 @@
           <input class="boton" type="text" id="valor_1">
           <label for="valor-2" id="label_2"></label>       
           <input class="boton" type="text" id="valor_2">
-          <label for="valor-r" id="label_r"></label>
+          <label for="valor-3" id="label_3"></label>       
+          <input class="boton" type="text" id="valor_3">
+          <label for="valor-4" id="label_4"></label>       
+          <input class="boton" type="text" id="valor_4">
+          <label for="valor-5" id="label_5"></label>       
+          <input class="boton" type="text" id="valor_5">
+          <br>
+
+          <label for="matriz" id="matriz_label"></label>       
+           <input type="file" id="matriz" name="matriz"/><br>
+
+           <label for="fasta1" id="fasta1_label"></label>       
+           <input type="file" id="fasta1" name="fasta1"/><br>
+
+           <label for="fasta2" id="fasta2_label"></label>       
+           <input type="file" id="fasta2" name="fasta2"/>
+          <!--<label for="valor-r" id="label_r"></label>
           <input class="barra" type="range" id="valor_r" name="valor" min="1" max="2" step="0.1" oninput="this.form.amountInput.value=this.value" />
           <input id=out type="number" name="amountInput" min="1" max="2" value="1.5" step="0.1" oninput="this.form.valor.value=this.value" />
-          <button type="submit">Calcular</button>  
-     </form>
-	    <div id="sidebar">
-	        <div class="box2">
-	          <div class="title">
-	            <h2>Integrantes</h2>
-	          </div>
-	          <ul class="style2">
-	            <li>GOMEZ CONTRERAS, JUNIOR</li>
-	            <li>PILCO PANCCA, LUZ MARINA</li>
-	            <li>BARRIOS CORNEJO, SELENE</li>
-	            <li>APAZA CHAVEZ, MARIA LOURDES</li>
-	          
-	          </ul>
-	      </div>
-	    </div> 
-    </div>    
+    -->
+          <br><br><br>
+             <button type="submit">Calcular</button>  
+          <!--<div id="cuadro" class="imagen temp">-->
+            <!--  <input type="file" id="file" name="file"/>
+              <img src="" id="imagen"/>-->
+             
 
-    
-    <div id="cuadro" class="imagen temp">
-      <input type="file" id="file" name="file"/>
-      <img src="" id="imagen"/>
-      <div id="resultado_bio">
-        
+         <!-- </div>--> 
+          <br>
+       
+     </form>
+      <div id="respuestas">
+        <hr>
+        Resultado
+        <pre>
+        <div id="resultado_bio">
+          
+        </div>
+        </div>
       </div>
-    </div> 
-  </main>  
-  <footer>
+
+      <div id="sidebar">
+          <div class="box2">
+            <div class="title">
+              <h2>Integrantes</h2>
+            </div>
+            <ul class="style2">
+              <li>GOMEZ CONTRERAS, JUNIOR</li>
+              <li>PILCO PANCCA, LUZ MARINA</li>
+              <li>BARRIOS CORNEJO, SELENE</li>
+              <li>APAZA CHAVEZ, MARIA LOURDES</li>
+            
+            </ul>
+        </div>
+      </div> 
+     </div>  
+	   
+      
+
+
+  </main> 
+
+  <footer >
 	  <div class="footer" >
-	       <p>Copyrigh &copy; 2020, Desing by Team</p>
+	       <p>Copyrigh &copy; 2021, Desing by Team</p>
 	  </div> 
   </footer>
   <script src="/static/js/app.js"></script> 
