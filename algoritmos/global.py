@@ -120,8 +120,14 @@ with open(matriz_txt, 'r') as f:
             matrix[col][row] = int(val)
 
 
+
+fileVariable = open('./static/output/global.txt', 'r+')
+fileVariable.truncate(0)
+fileVariable.close()
+
 alinear = AligmentGlobal(s1,s2,matrix)
 vecA, vecB = alinear._global(in_match,in_mismatch,in_d)
+
 print(vecA)
 print(vecB)
 #alinear = Alligment(s1,s2, matrix)
@@ -133,11 +139,12 @@ print(vecB)
 	#out.write(alinear + '\n')
 #	out.write(vecA_string + '\n')
 #	out.write(vecB_string + '\n')
+'''
 with open("./static/output/global.txt", "w") as txt_file:
 	for line in alinear._global(in_match,in_mismatch,in_d):
 		txt_file.write(" ".join(line) + " , ")
 
-'''
+
 	txt_file.write(" VecA : [")
 	
 	for line in vecA:

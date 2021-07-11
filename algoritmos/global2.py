@@ -131,13 +131,16 @@ class AligmentGlobal:
         vecB.append(newcadB)
 
 
+fileVariable = open('./static/output/global2.txt', 'r+')
+fileVariable.truncate(0)
+fileVariable.close()
 
 alinear = AligmentGlobal(fasta1,fasta2)
 vecA, vecB = alinear._global(in_match,in_mismatch,in_d)
 print(vecA)
 print("********************************************"+"\n")
 print(vecB)
-
+'''
 #with open("./static/output/global.txt", "w") as txt_file:
 with open("./static/output/global2.txt", "w") as txt_file:
     txt_file.write(" VecA : [")
@@ -150,4 +153,4 @@ with open("./static/output/global2.txt", "w") as txt_file:
     for line in vecB:
         txt_file.write(" ".join(line) + " , ")
 
-    txt_file.write(" ]")
+    txt_file.write(" ]")'''
