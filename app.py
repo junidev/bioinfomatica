@@ -81,23 +81,26 @@ def calcular():
 
 
     if operador=='global':    
-        os.system('python3 algoritmos/global.py '+valor_1+' '+valor_2+' '+valor_3+' '+valor_4+' '+valor_5+' '+'static/input/'+filename)
+        os.system('python3 algoritmos/global.py '+valor_1+' '+valor_2+' '+valor_3+' '+valor_4+' '+valor_5+' '+'static/input/'+filename+' >> /home/junior/UNSA/noveno/bio/examen/static/output/global.txt')
     if operador=='global2':    
-        os.system('python3 algoritmos/global2.py static/input/'+fasta1+' static/input/'+fasta2+' '+valor_1+' '+valor_2+' '+valor_3)
+        os.system('python3 algoritmos/global2.py static/input/'+fasta1+' static/input/'+fasta2+' '+valor_1+' '+valor_2+' '+valor_3+' >> /home/junior/UNSA/noveno/bio/examen/static/output/global2.txt')
     elif operador=='local':
-        os.system('python algoritmos/hist_Equalization.py static/images/'+filename)
+        os.system('python3 algoritmos/local.py '+valor_1+' '+valor_2+' '+valor_3+' '+valor_4+' '+valor_5+' >> /home/junior/UNSA/noveno/bio/examen/static/output/local.txt')
     elif operador=='blast':
-        os.system('python algoritmos/logaritmo.py static/images/'+filename +' '+ valor_1)
+        os.system("./blast 'Dataset' static/input/"+filename+" > /home/junior/UNSA/noveno/bio/examen/static/output/blast.txt")
     elif operador=='muscle':    
-        os.system('python algoritmos/raizC.py static/images/'+filename+' '+valor_1)
+        #os.system('python algoritmos/raizC.py static/images/'+filename+' '+valor_1)
+        os.system('muscle -in /home/junior/UNSA/noveno/bio/examen/static/input/'+fasta1+' -out /home/junior/UNSA/noveno/bio/examen/static/output/muscle.txt')
     elif operador=='jukes':    
-        os.system('python algoritmos/contrast.py static/images/'+filename+' '+valor_1)
+        os.system('python3 algoritmos/jukes.py '+valor_1+' '+valor_2+' >> /home/junior/UNSA/noveno/bio/examen/static/output/jukes.txt')
     elif operador=='kimura':    
-        os.system('python algoritmos/contrast.py static/images/'+filename+' '+valor_1)
+        os.system('python3 algoritmos/kimura.py static/input/'+fasta1+' static/input/'+fasta2+' >> /home/junior/UNSA/noveno/bio/examen/static/output/kimura.txt')
     elif operador=='upgma':    
-        os.system('python algoritmos/contrast.py static/images/'+filename+' '+valor_1)
+        os.system('python3 algoritmos/upgma.py static/input/'+filename+' '+valor_1+' >> /home/junior/UNSA/noveno/bio/examen/static/output/upgma.txt')
+    elif operador=='neighbor':    
+        os.system('python2 algoritmos/neighbor.py static/input/'+filename+' >> /home/junior/UNSA/noveno/bio/examen/static/output/neighbor.txt')
     else:    
-        os.system('python3 algoritmos/neighbor.py static/images/'+filename+' '+valor_1+' '+valor_2)
+        os.system('python2 algoritmos/neighbor.py static/input/'+filename+' >> /home/junior/UNSA/noveno/bio/examen/static/output/muscle.txt')
 
 
 
