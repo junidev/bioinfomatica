@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 
         if(this.value=="global") {
-
+            $('#resultado_bio').empty();
             $('#valor_1').hide();
             $('#valor_2').hide();
             $('#valor_3').hide();
@@ -53,6 +53,7 @@ $(document).ready(function() {
             $('#matriz').show();
         }
         else if(this.value=="global2") {
+            $('#resultado_bio').empty();
             $('#valor_1').hide();
             $('#valor_2').hide();
             $('#valor_3').hide();
@@ -91,6 +92,7 @@ $(document).ready(function() {
         }
 
         else if (this.value=="local") {
+            $('#resultado_bio').empty();
              $('#valor_1').hide();
             $('#valor_2').hide();
             $('#valor_3').hide();
@@ -108,10 +110,26 @@ $(document).ready(function() {
             $('#matriz_label').text("");
             $('#fasta1_label').text("");
             $('#fasta2_label').text("");
+
+            $("#label_1").text("s1");
+            $('#valor_1').show();
+
+            $("#label_2").text("s2");
+            $('#valor_2').show();
+
+            $("#label_3").text("Match");
+            $('#valor_3').show();
+
+            $("#label_4").text("misMath");
+            $('#valor_4').show();
+
+            $("#label_5").text("d");
+            $('#valor_5').show();
 
         
         }
         else if(this.value=="blast") {
+            $('#resultado_bio').empty();
              $('#valor_1').hide();
             $('#valor_2').hide();
             $('#valor_3').hide();
@@ -129,9 +147,13 @@ $(document).ready(function() {
             $('#matriz_label').text("");
             $('#fasta1_label').text("");
             $('#fasta2_label').text("");
+
+             $("#matriz_label").text("Matriz");
+            $('#matriz').show();
 
         }
         else if(this.value=="muscle") {
+            $('#resultado_bio').empty();
              $('#valor_1').hide();
             $('#valor_2').hide();
             $('#valor_3').hide();
@@ -150,10 +172,14 @@ $(document).ready(function() {
             $('#fasta1_label').text("");
             $('#fasta2_label').text("");
 
+
+            $("#fasta1_label").text("fasta1");
+            $('#fasta1').show();
         
         }
         else if(this.value=="jukes") {
-             $('#valor_1').hide();
+            $('#resultado_bio').empty();
+            $('#valor_1').hide();
             $('#valor_2').hide();
             $('#valor_3').hide();
             $('#valor_4').hide();
@@ -170,9 +196,16 @@ $(document).ready(function() {
             $('#matriz_label').text("");
             $('#fasta1_label').text("");
             $('#fasta2_label').text("");
+
+            $("#label_1").text("seq 1");
+            $('#valor_1').show();
+
+            $("#label_2").text("seq 2");
+            $('#valor_2').show();
 
         }
         else if(this.value=="kimura") {
+            $('#resultado_bio').empty();
              $('#valor_1').hide();
             $('#valor_2').hide();
             $('#valor_3').hide();
@@ -191,8 +224,14 @@ $(document).ready(function() {
             $('#fasta1_label').text("");
             $('#fasta2_label').text("");
 
+            $("#fasta1_label").text("fasta1");
+            $('#fasta1').show();
+            $("#fasta2_label").text("fasta2");
+            $('#fasta2').show();
+
         }
         else if(this.value=="upgma") {
+            $('#resultado_bio').empty();
              $('#valor_1').hide();
             $('#valor_2').hide();
             $('#valor_3').hide();
@@ -210,6 +249,35 @@ $(document).ready(function() {
             $('#matriz_label').text("");
             $('#fasta1_label').text("");
             $('#fasta2_label').text("");
+
+            $("#label_1").text("label");
+            $('#valor_1').show();
+
+            $("#matriz_label").text("Matriz");
+            $('#matriz').show();
+
+        } else if(this.value=="neighbor") {
+            $('#resultado_bio').empty();
+             $('#valor_1').hide();
+            $('#valor_2').hide();
+            $('#valor_3').hide();
+            $('#valor_4').hide();
+            $('#valor_5').hide();
+            $('#matriz').hide();
+            $('#fasta1').hide();
+            $('#fasta2').hide();
+            
+            $('#label_1').text("");
+            $('#label_2').text("");
+            $('#label_3').text("");
+            $('#label_4').text("");
+            $('#label_5').text("");
+            $('#matriz_label').text("");
+            $('#fasta1_label').text("");
+            $('#fasta2_label').text("");
+
+            $("#matriz_label").text("Matriz");
+            $('#matriz').show();
 
         }
   
